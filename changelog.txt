@@ -1,0 +1,13 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.1.1
+Date: 1. 6. 2019
+  Features:
+    - Added remote interface to change AAI-Programmable-Vehicles' "construction_denial_range" value dynamically with evolution factor
+      (note: This feature is not yet implemented in AAI-Programmable-Vehicles, I have requested it, I have no idea if/when it will be implemented)
+    - Turret creep with vanilla gun turrets will work up to an evolution factor of ~0.36
+    - Turret creep with Bob's sniper turrets will work up to an evolution factor of ~0.7
+
+---------------------------------------------------------------------------------------------------
+Version: 0.1.0
+Date: 31. 5. 2019
+  Initial Release
