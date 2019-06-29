@@ -49,10 +49,14 @@ do
   end
 
   -- Miners
-  if data.raw.technology["vehicle-miner"] and data.raw.technology["basic-vehicles"] then
+  if data.raw.technology["vehicle-miner"] and data.raw.technology["basic-vehicles"] and data.raw.technology["electric-mining"] then
     data.raw.technology["vehicle-miner"].prerequisites = {"basic-vehicles", "electric-mining"}
-  elseif data.raw.technology["vehicle-miner"] then
+  elseif data.raw.technology["vehicle-miner"] and data.raw.technology["electric-mining"] then
     data.raw.technology["vehicle-miner"].prerequisites = {"logistics-2", "engine", "electric-mining"}
+  elseif data.raw.technology["vehicle-miner"] and data.raw.technology["basic-vehicles"]then
+    data.raw.technology["vehicle-miner"].prerequisites = {"basic-vehicles"}
+  elseif data.raw.technology["vehicle-miner"] then
+    data.raw.technology["vehicle-miner"].prerequisites = {"logistics-2", "engine"}
   end
 
   if data.raw.technology["vehicle-miner"] then
@@ -196,15 +200,6 @@ do
   data.raw.technology["engine"].unit.count = 100
   data.raw.technology["engine"].unit.time = 15
   data.raw.technology["automobilism"].unit.time = 30
-  -- Same with circuit-network
-  data.raw.technology["circuit-network"].prerequisites = {"logistic-science-pack", "electronics"}
-
-  data.raw.technology["circuit-network"].unit.ingredients = {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1}
-      }
-  data.raw.technology["circuit-network"].unit.count = 100
-  data.raw.technology["circuit-network"].unit.time = 15
 
 end
 

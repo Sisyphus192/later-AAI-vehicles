@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.2
+Date: 29. 6. 2019
+  Fixes
+    - Vehicle Miner MK1 research will now check if the Electric Mining Tech from AAI industry is available.
+      Should resolve issues with not being able to research Vehicle Miner MK1 when not playing with AAI Industry.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.1.1
 Date: 1. 6. 2019
   Features:
